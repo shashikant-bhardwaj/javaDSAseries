@@ -76,7 +76,7 @@ public class Arrays {
 //            arr[i] = sc.nextInt();
 //        }
 //
-//        //print sum of all elements in array
+//        //print product of all elements in array
 //        int product = 1;
 //        for (int i = 0; i <= n-1; i++) {
 //            product *= arr[i];
@@ -144,7 +144,7 @@ public class Arrays {
 //        for (int rowIndex = 0; rowIndex <= rowLength - 1; rowIndex++) {
 //            //jaise hi mai kisi new  row mei aaya
 //            //same point mei maine uss row ka colLength find out kr liya
-//            //current row --> brr[rowLength]
+//            //current row --> brr[rowIndex]
 //            //ismei kitna column --> brr[rowIndex].length
 //
 //            int colLength = brr[rowIndex].length;
