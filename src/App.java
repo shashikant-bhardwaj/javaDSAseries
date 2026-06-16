@@ -4,7 +4,7 @@ public class App {
 //        System.out.println("hello world");
 
 
-        //Default constructor // ye kafi mushkil tarika hai iski toh hum default ctor use nhi krenge. hum iski jagah parametrised constructor use krenge
+        //Default constructor // ye kafi mushkil tarika hai isliye toh hum default ctor use nhi krenge. hum iski jagah parametrised constructor use krenge
 //        Student A = new Student();
 //        A.id = 1;
 //        A.age = 14;
@@ -21,21 +21,24 @@ public class App {
 //        A.sleep();
 
         // Paramterised Constructor
-        Student A = new Student(1, 12, "Rahul", 3);
+        Student A = new Student(1, 12, "Rahul", 3, "tina");
 
-//        System.out.println(A.name);
+        System.out.println(A.getName());
 //        System.out.println(A.age);
 //        System.out.println(A.id);
 //        System.out.println(A.nos);
-//
-//
-//        A.bunk();
-//        A.study();
-//        A.sleep();
+//        System.out.println(A.gf); --> this is a private information , not accessible -->  encapsulation
 
-        Student C = new Student(12, 14, "Suresh", 4);
-        Student D = new Student(3, 15, "Mahesh", 5);
-        Student E = new Student(4, 12, "Lokesh", 2);
+        A.setAge(4);
+        System.out.println(A.getAge());
+
+        A.bunk();
+        A.study();
+        A.sleep();
+
+//        Student C = new Student(12, 14, "Suresh", 4);
+//        Student D = new Student(3, 15, "Mahesh", 5);
+//        Student E = new Student(4, 12, "Lokesh", 2);
 
         // copy constructor
         Student B = new Student(A);
