@@ -21,27 +21,27 @@ public class App {
 //        A.sleep();
 
         // Paramterised Constructor
-        Student A = new Student(1, 12, "Rahul", 3, "tina");
+//        Student A = new Student(1, 12, "Rahul", 3, "tina");
 
-        System.out.println(A.getName());
+//        System.out.println(A.getName());
 //        System.out.println(A.age);
 //        System.out.println(A.id);
 //        System.out.println(A.nos);
 //        System.out.println(A.gf); --> this is a private information , not accessible -->  encapsulation
 
-        A.setAge(4);
-        System.out.println(A.getAge());
-
-        A.bunk();
-        A.study();
-        A.sleep();
+//        A.setAge(4);
+//        System.out.println(A.getAge());
+//
+//        A.bunk();
+//        A.study();
+//        A.sleep();
 
 //        Student C = new Student(12, 14, "Suresh", 4);
 //        Student D = new Student(3, 15, "Mahesh", 5);
 //        Student E = new Student(4, 12, "Lokesh", 2);
 
         // copy constructor
-        Student B = new Student(A);
+//        Student B = new Student(A);
 
 //        System.out.println(B.name);
 //        System.out.println(B.age);
