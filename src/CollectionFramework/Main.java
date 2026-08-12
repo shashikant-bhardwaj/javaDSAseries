@@ -102,15 +102,59 @@ public class Main {
       linkedList.remove(3);
       linkedList.remove(3);
       linkedList.remove(3);
-      System.out.println("printing original linkedList:" + linkedList);
+      System.out.println(linkedList);
       linkedList.addFirst(9);
-      System.out.println("printing original linkedList:" + linkedList);
+      System.out.println(linkedList);
       linkedList.addLast(10);
-      System.out.println("printing original linkedList:" + linkedList);
+      System.out.println(linkedList);
       linkedList.removeFirst();
-      System.out.println("printing original linkedList:" + linkedList);
+      System.out.println(linkedList);
       linkedList.removeLast();
-      System.out.println("printing original linkedList:" + linkedList);
+      System.out.println(linkedList);
+
+      // getFirst and GetLast
+      System.out.println(linkedList.getFirst());
+      System.out.println(linkedList.getLast());
+
+      //Peek --> it return element from which the linked list started
+      System.out.println(linkedList.peek());
+
+      //peekFirst
+      System.out.println(linkedList.peekFirst());
+
+      //peekLast()
+      System.out.println(linkedList.peekLast());
+
+      //poll--> return first element as well as remove it from the list
+      System.out.println("Before: " +linkedList);
+      System.out.println("polling: " +linkedList.poll());
+      System.out.println("After: " +linkedList);
+
+      // offer --> similar to addLast
+      System.out.println(linkedList.offer(99));
+      System.out.println("after offer: " +linkedList);
+
+
+      // stack
+     Stack<Integer> stack =  new Stack<Integer>();
+     stack.add(10);
+     System.out.println(stack);
+     stack.push(20);
+      stack.push(40);
+      System.out.println(stack);
+      stack.pop();
+      System.out.println(stack);
+
+      // search
+      System.out.println(stack.search(12));
+      System.out.println(stack.search(20));
+
+      // empty
+      System.out.println(stack.empty());
+
+
+
+
 
 
 
