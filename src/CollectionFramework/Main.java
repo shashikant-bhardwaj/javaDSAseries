@@ -59,7 +59,7 @@ public class Main {
       for(Object Obj: arr){
            System.out.println(Obj);
       }
-
+      System.out.println(arr);
       //contains()
       System.out.println(list3.contains(100));
 
@@ -86,12 +86,33 @@ public class Main {
       //indexOf()
       System.out.println(newlist.indexOf(40));
 
+ // LinkedList
+
+      LinkedList<Integer> linkedList = new LinkedList<>();
+      //add
+      linkedList.add(10);
+      linkedList.add(20);
+      linkedList.add(30);
+      linkedList.add(10);
+      linkedList.add(40);
+      linkedList.add(10);
+      System.out.println(linkedList.lastIndexOf(10));
+
+      //addFirst and addLast
+      linkedList.remove(3);
+      linkedList.remove(3);
+      linkedList.remove(3);
+      System.out.println("printing original linkedList:" + linkedList);
+      linkedList.addFirst(9);
+      System.out.println("printing original linkedList:" + linkedList);
+      linkedList.addLast(10);
+      System.out.println("printing original linkedList:" + linkedList);
+      linkedList.removeFirst();
+      System.out.println("printing original linkedList:" + linkedList);
+      linkedList.removeLast();
+      System.out.println("printing original linkedList:" + linkedList);
 
 
 
-      //or
-//      List<Integer> list =  new ArrayList<>();
-      //or
-//      Collection<Integer> collection =  new ArrayList<>();
     }
 }
