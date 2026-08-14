@@ -1,12 +1,14 @@
 package CollectionFramework;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class HashMapBasics {
     static void main() {
 
-        Map<String,String> map = new HashMap<>();
+        Map<String,String> map = new HashMap<>(); // time complexity --> O(1)
 
         //insertion
 
@@ -43,7 +45,43 @@ public class HashMapBasics {
         System.out.println(map2.containsValue("India"));
 
         map2.replace("in","Indonesia");
-        System.out.println(map2);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+        System.out.println(map2);
+
+//        map2.remove("in","india");
+        System.out.println(map2);
+
+
+
+        Set<String> keyset = map2.keySet();
+        System.out.println("keyset: " + keyset);
+
+        Collection<String> valuesset = map2.values();
+        System.out.println("valueset: " + valuesset);
+
+
+        //get all the entries from map
+
+       Set<Map.Entry<String, String>> entries = map2.entrySet();
+        System.out.println("entries: " + entries);
+
+
+        //how to do loop map
+
+        Map<Integer, String> map3 = new HashMap<>();
+        map3.put(1,"One");
+        map3.put(2,"Two");
+        map3.put(3,"Three");
+
+        for(Map.Entry<Integer, String> entry : map3.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + " Value: " + entry.getValue());
+
+            //LinkedHashMap --> time complexity--> O(n)
+            //TreeMap
+
+
+
+
+        }
 
 
     }
