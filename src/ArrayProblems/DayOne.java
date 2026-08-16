@@ -138,11 +138,17 @@ public class DayOne {
       int right = arr.length - 1;
       int [] result = new int [arr.length];
       while(left <= right){
-          result[index] = arr[left];
-          result[index+1] = arr[right];
-          left++;
-          right--;
-          index += 2;
+          if(left == right){
+              result[index] = arr[left];
+              break;
+          }else{
+              result[index] = arr[left];
+              result[index+1] = arr[right];
+              left++;
+              right--;
+              index += 2;
+
+          }
 
       }
       return result;
