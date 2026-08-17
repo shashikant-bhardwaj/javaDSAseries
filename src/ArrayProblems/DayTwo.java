@@ -18,7 +18,7 @@ public class DayTwo {
         return arr;
     }
 
-    // question 12 -> swap element by one position
+    // question 12 -> shift element by one position
     static int[] shiftElementByOnePosition(int[] arr){
        int temp = arr[arr.length-1];
        for(int i=arr.length-1;i>0;i--){
@@ -89,6 +89,65 @@ public class DayTwo {
 
     }
 
+    //question 15 -> shift element by k position
+    static int[] shiftElementByPositionK(int[] arr,int k){
+        int [] temp = new int[k];
+        int limit = arr.length - k;
+        int index = 0;
+        for(int i = arr.length-1;i>=limit;i--){
+            temp[index] = arr[i];
+            index++;
+        }
+        for(int i = arr.length-1;i>=k;i--){
+            arr[i] = arr[i-k];
+        }
+        for(int i = 0; i < k; i++){
+            arr[i] = temp[i];
+
+        }
+        return arr;
+    }
+
+    // question 16 -> find union of two array
+    static int[] unionOfArrays(int[] arr1, int[] arr2){
+     int [] result = new int[arr1.length+arr2.length];
+     int index = 0;
+     //pehle 1st array ke element result mei store krenge
+     for(int i=0;i<arr1.length;i++){
+         result[index]=arr1[i];
+         index++;
+     }
+
+
+     //ab second array ke element  result mei store krenge with condition
+        for(int i=0;i<arr2.length;i++){
+
+            boolean found = false;
+
+            for(int j = 0; j < index; j++){
+
+                if(result[j] == arr2[i]){
+                    found = true;
+                    break;
+                }
+            }
+
+            if(!found){
+                result[index] = arr2[i];
+                index++;
+            }
+        }
+        int [] ans = new int[index];
+        for(int i = 0; i < index; i++){
+            ans[i] = result[i];
+        }
+
+        return ans;
+
+
+
+    }
+
 
     static void main() {
 
@@ -120,5 +179,22 @@ public class DayTwo {
         int[] ans4 = getHighAndLowFreq(arr4);
         System.out.println("Highest frequency number: " + ans4[0]);
         System.out.println("Lowest frequency number: " + ans4[1]);
+
+        // for q-15
+        int [] arr5 = {1, 2, 3, 4, 5, 6};
+        int k = 2;
+        int []ans5 = shiftElementByPositionK(arr5, k);
+        for (int i: ans5) {
+            System.out.println(i);
+        }
+        System.out.println();
+
+        // for q-16
+        int [] arr6 = {1, 2, 3, 4};
+        int [] arr7 = {4, 5, 6, 7, 8};
+        int [] ans6 = unionOfArrays(arr6, arr7);
+        for(int i: ans6){
+            System.out.println(i);
+        }
     }
 }
