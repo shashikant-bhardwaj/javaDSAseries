@@ -2,7 +2,7 @@ package ArrayProblems;
 
 public class DayThree {
 
-    // question 1 -> sort of an array of 0s and 1s
+    // question 17 -> sort of an array of 0s and 1s
     static int [] sortZerosAndOnes(int [] arr) {
         int i = 0;
         int j = arr.length - 1;
@@ -20,7 +20,7 @@ public class DayThree {
         return arr;
     }
 
-    //question 2 -> find missing number in an array
+    //question 18 -> find missing number in an array
     static int missingNumber(int arr[]){
         int XorSum = 0;
         //Xor with all array elements
@@ -34,7 +34,7 @@ public class DayThree {
         return XorSum;
     }
 
-    // qustion 3 -> find unique element in an array (where other numbers appears twice)
+    // qustion19 -> find unique element in an array (where other numbers appears twice)
     static int uniqueNumber(int [] arr){
         int XorSum = 0;
         for(int i : arr){
